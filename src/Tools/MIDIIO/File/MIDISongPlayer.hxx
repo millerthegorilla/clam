@@ -21,6 +21,8 @@
  * Maarten de Boer <mdeboer@iua.upf.es>
  *
  */
+ 
+#include <cstddef>
 namespace MIDI
 {
 

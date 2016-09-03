@@ -22,20 +22,26 @@
 #ifndef __ByteOrder__
 #define __ByteOrder__
 
+#if defined(__linux__) || defined(_WIN32)
+ #include <cstdint>
+#else
+ #include <tr/cstdint>
+#endif
+
+#define IS_BIG_ENDIAN (*(uint16_t *)"\0\xff" < 0x100)
+
 // --------------------------------------
 // Mac OS X
 
-#ifdef __BIG_ENDIAN__
-# define CLAM_BIG_ENDIAN
-#endif
-
-#ifdef __LITTLE_ENDIAN__
-# define CLAM_LITTLE_ENDIAN
+#if IS_BIG_ENDIAN
+ # define CLAM_BIG_ENDIAN
+#else
+ # define CLAM_LITTLE_ENDIAN
 #endif
 
 // --------------------------------------
 // Linux
-
+/*
 #ifdef linux
 #include <endian.h> //sys/params.h
 #pragma message("endianness = ")
@@ -48,13 +54,14 @@
 # endif
 #endif
 
+
 // --------------------------------------
 // Win32
 
 #ifdef WIN32
 # define CLAM_LITTLE_ENDIAN
 #endif
-
+*/
 // --------------------------------------
 // Error Check
 
