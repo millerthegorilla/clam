@@ -1,0 +1,176 @@
+scons: Reading SConscript files ...
+Version:  1.4.0
+Package version:  1.4.0
+#############################################
+### INSTALL DIRECTORY INFORMATION         ###
+#############################################
+Directory to install under: /usr/local
+	Library files will be installed at: /usr/local/lib
+	Executable files will be installed at: /usr/local/bin
+	Include files will be installed at: /usr/local/include
+	Documentation, data and examples will be installed at: /usr/local/share
+blacklisted XercesDomWriter.cxx
+blacklisted NullDomWritingContext.hxx
+blacklisted XercesEncodings.hxx
+blacklisted NullDomDocumentHandler.hxx
+blacklisted XercesDomWritingContext.hxx
+blacklisted XercesDomWriter.hxx
+blacklisted XercesInitializer.hxx
+blacklisted XercesDomReadingContext.hxx
+blacklisted XercesDomWritingContext.cxx
+blacklisted NullDomReadingContext.hxx
+blacklisted XercesDomDocumentHandler.hxx
+blacklisted XercesDomReader.hxx
+blacklisted XercesDomReadingContext.cxx
+blacklisted Audio.cxx
+blacklisted Audio.hxx
+blacklisted main.cxx
+##############################################
+### BUILDING CLAM LIBRARIES                ###
+##############################################
+scons: done reading SConscript files.
+scons: Building targets ...
+== Compiling shared scons/libs/core/src/ProcessingFactory.cxx
+scons: building terminated because of errors.
+scons: Reading SConscript files ...
+Version:  1.4.0
+Package version:  1.4.0
+#############################################
+### INSTALL DIRECTORY INFORMATION         ###
+#############################################
+Directory to install under: /usr/local
+	Library files will be installed at: /usr/local/lib
+	Executable files will be installed at: /usr/local/bin
+	Include files will be installed at: /usr/local/include
+	Documentation, data and examples will be installed at: /usr/local/share
+blacklisted XercesDomWriter.cxx
+blacklisted NullDomWritingContext.hxx
+blacklisted XercesEncodings.hxx
+blacklisted NullDomDocumentHandler.hxx
+blacklisted XercesDomWritingContext.hxx
+blacklisted XercesDomWriter.hxx
+blacklisted XercesInitializer.hxx
+blacklisted XercesDomReadingContext.hxx
+blacklisted XercesDomWritingContext.cxx
+blacklisted NullDomReadingContext.hxx
+blacklisted XercesDomDocumentHandler.hxx
+blacklisted XercesDomReader.hxx
+blacklisted XercesDomReadingContext.cxx
+blacklisted Audio.cxx
+blacklisted Audio.hxx
+blacklisted main.cxx
+##############################################
+### BUILDING CLAM LIBRARIES                ###
+##############################################
+scons: done reading SConscript files.
+scons: Building targets ...
+== Compiling shared scons/libs/core/src/ProcessingFactory.cxx
+== Compiling shared scons/libs/core/src/DynamicType.cxx
+== Compiling shared scons/libs/core/src/Component.cxx
+== Compiling shared scons/libs/core/src/ProcessingData.cxx
+== Compiling shared scons/libs/core/src/ProcessingDataConfig.cxx
+== Compiling shared scons/libs/core/src/ProcessingDataPlugin.cxx
+== Compiling shared scons/libs/core/src/Audio.cxx
+== Compiling shared scons/libs/core/src/DescriptionAttributes.cxx
+== Compiling shared scons/libs/core/src/DescriptionScope.cxx
+== Compiling shared scons/libs/core/src/ScopePool.cxx
+== Compiling shared scons/libs/core/src/DescriptionScheme.cxx
+== Compiling shared scons/libs/core/src/Pool.cxx
+== Compiling shared scons/libs/core/src/Segmentation.cxx
+== Compiling shared scons/libs/core/src/TypeInfo.cxx
+== Compiling shared scons/libs/core/src/CLAMVersion.cxx
+== Compiling shared scons/libs/core/src/Assert.cxx
+== Compiling shared scons/libs/core/src/ErrSoundFileIO.cxx
+== Compiling shared scons/libs/core/src/ErrSystem.cxx
+== Compiling shared scons/libs/core/src/ErrOpenFile.cxx
+== Compiling shared scons/libs/core/src/ErrOutOfMemory.cxx
+== Compiling shared scons/libs/core/src/ErrProcessingObj.cxx
+== Compiling shared scons/libs/core/src/Err.cxx
+== Compiling shared scons/libs/core/src/ErrDynamicType.cxx
+== Compiling shared scons/libs/core/src/OutPort.cxx
+== Compiling shared scons/libs/core/src/AudioOutPort.cxx
+== Compiling shared scons/libs/core/src/AudioInPortPublisher.cxx
+== Compiling shared scons/libs/core/src/Region.cxx
+== Compiling shared scons/libs/core/src/AudioOutPortPublisher.cxx
+== Compiling shared scons/libs/core/src/InPort.cxx
+== Compiling shared scons/libs/core/src/AudioInPort.cxx
+== Compiling shared scons/libs/core/src/NaiveFlowControl.cxx
+== Compiling shared scons/libs/core/src/FlowControl.cxx
+== Compiling shared scons/libs/core/src/PushFlowControl.cxx
+== Compiling shared scons/libs/core/src/ProcessingDefinitionAdapter.cxx
+== Compiling shared scons/libs/core/src/ConnectionDefinitionAdapter.cxx
+== Compiling shared scons/libs/core/src/Network.cxx
+== Compiling shared scons/libs/core/src/NetworkPlayer.cxx
+== Compiling shared scons/libs/core/src/BasicFlowControl.cxx
+== Compiling shared scons/libs/core/src/InformationTextAdapter.cxx
+== Compiling shared scons/libs/core/src/TypedInControl.cxx
+== Compiling shared scons/libs/core/src/OutControlBase.cxx
+== Compiling shared scons/libs/core/src/OutControlArray.cxx
+== Compiling shared scons/libs/core/src/Mapping.cxx
+== Compiling shared scons/libs/core/src/ControlMultiplier.cxx
+== Compiling shared scons/libs/core/src/InControlArray.cxx
+== Compiling shared scons/libs/core/src/OutControl.cxx
+== Compiling shared scons/libs/core/src/InControlBase.cxx
+== Compiling shared scons/libs/core/src/InControl.cxx
+== Compiling shared scons/libs/core/src/TopLevelProcessing.cxx
+== Compiling shared scons/libs/core/src/InControlRegistry.cxx
+== Compiling shared scons/libs/core/src/ProcessingConfig.cxx
+== Compiling shared scons/libs/core/src/OutControlRegistry.cxx
+== Compiling shared scons/libs/core/src/ProcessingComposite.cxx
+== Compiling shared scons/libs/core/src/OutPortRegistry.cxx
+== Compiling shared scons/libs/core/src/Processing.cxx
+== Compiling shared scons/libs/core/src/InPortRegistry.cxx
+== Compiling shared scons/libs/core/src/AudioSink.cxx
+== Compiling shared scons/libs/core/src/AudioSource.cxx
+== Compiling shared scons/libs/core/src/AudioBufferSink.cxx
+== Compiling shared scons/libs/core/src/AudioBufferSource.cxx
+== Compiling shared scons/libs/core/src/ControlSink.cxx
+== Compiling shared scons/libs/core/src/ControlSource.cxx
+== Compiling shared scons/libs/core/src/LadspaProcessingExporter.cxx
+== Compiling shared scons/libs/core/src/RunTimeProcessingLibraryLoader.cxx
+== Compiling shared scons/libs/core/src/LadspaWrapperBuffer.cxx
+== Compiling shared scons/libs/core/src/LadspaWrapper.cxx
+== Compiling shared scons/libs/core/src/RunTimeLibraryLoader.cxx
+== Compiling shared scons/libs/core/src/LadspaNetworkExporter.cxx
+== Compiling shared scons/libs/core/src/Connection.cxx
+== Compiling shared scons/libs/core/src/Slot.cxx
+== Compiling shared scons/libs/core/src/TraverseDirectory.cxx
+gcc -o scons/libs/core/src/strfuncs.os -c -g -O3 -fomit-frame-pointer -std=c++11 -Wall -fpermissive -fPIC -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DCLAM_MODULE=core -Iscons/libs/core/include/CLAM -Iscons/libs/core/include -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include scons/libs/core/src/strfuncs.c
+== Compiling shared scons/libs/core/src/Polar.cxx
+== Compiling shared scons/libs/core/src/Point.cxx
+== Compiling shared scons/libs/core/src/BPF.cxx
+gcc -o scons/libs/core/src/recursedir.os -c -g -O3 -fomit-frame-pointer -std=c++11 -Wall -fpermissive -fPIC -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DCLAM_MODULE=core -Iscons/libs/core/include/CLAM -Iscons/libs/core/include -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include scons/libs/core/src/recursedir.c
+== Compiling shared scons/libs/core/src/Text.cxx
+== Compiling shared scons/libs/core/src/Complex.cxx
+== Compiling shared scons/libs/core/src/DirectoryName.cxx
+== Compiling shared scons/libs/core/src/Flags.cxx
+== Compiling shared scons/libs/core/src/Array.cxx
+== Compiling shared scons/libs/core/src/Signal.cxx
+== Compiling shared scons/libs/core/src/GlobalEnums.cxx
+== Compiling shared scons/libs/core/src/Order.cxx
+== Compiling shared scons/libs/core/src/Enum.cxx
+== Compiling shared scons/libs/core/src/Matrix.cxx
+== Compiling shared scons/libs/core/src/XMLStorage.cxx
+== Compiling shared scons/libs/core/src/XMLComponentAdapter.cxx
+== Build copying src/Storage/XML/XmlStorageErr.cxx
+== Compiling shared scons/libs/core/src/XmlStorageErr.cxx
+== Build copying src/Storage/XML/BasicXMLable.cxx
+== Compiling shared scons/libs/core/src/BasicXMLable.cxx
+== Build copying src/Storage/XML/XmlWriteContext.cxx
+== Build copying src/Storage/XML/XmlWriteContext.hxx
+== Compiling shared scons/libs/core/src/XmlWriteContext.cxx
+== Build copying src/Storage/XML/XMLAdapter.cxx
+== Compiling shared scons/libs/core/src/XMLAdapter.cxx
+== Build copying src/Storage/XML/LibXmlDomReadingContext.cxx
+== Compiling shared scons/libs/core/src/LibXmlDomReadingContext.cxx
+== Build copying src/Storage/XML/LibXmlDomWritingContext.cxx
+== Compiling shared scons/libs/core/src/LibXmlDomWritingContext.cxx
+== Build copying src/Storage/XML/XMLable.cxx
+== Compiling shared scons/libs/core/src/XMLable.cxx
+== Build copying src/System/FileSystem.cxx
+== Build copying src/System/FileSystem.hxx
+== Build copying src/System/Threads/Lock.hxx
+== Build copying src/System/Threads/Mutex.hxx
+== Build copying src/System/Threads/xtime.hxx
+== Compiling shared scons/libs/core/src/FileSystem.cxx
+scons: building terminated because of errors.

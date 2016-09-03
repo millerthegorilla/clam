@@ -1,0 +1,1107 @@
+file /home/admin/src/CLAM-1.4.0/SConstruct,line 66:
+	Configure(confdir = .sconf_temp)
+scons: Configure: Checking for pkg-config... 
+pkg-config --help
+Usage:
+  pkg-config [OPTION...]
+
+Help Options:
+  -h, --help                              Show help options
+
+Application Options:
+  --version                               output version of pkg-config
+  --modversion                            output version for package
+  --atleast-pkgconfig-version=VERSION     require given version of pkg-config
+  --libs                                  output all linker flags
+  --static                                output linker flags for static linking
+  --short-errors                          print short errors
+  --libs-only-l                           output -l flags
+  --libs-only-other                       output other libs (e.g. -pthread)
+  --libs-only-L                           output -L flags
+  --cflags                                output all pre-processor and compiler flags
+  --cflags-only-I                         output -I flags
+  --cflags-only-other                     output cflags not covered by the cflags-only-I option
+  --variable=NAME                         get the value of variable named NAME
+  --define-variable=NAME=VALUE            set variable NAME to VALUE
+  --exists                                return 0 if the module(s) exist
+  --print-variables                       output list of variables defined by the module
+  --uninstalled                           return 0 if the uninstalled version of one or more module(s) or their dependencies will be used
+  --atleast-version=VERSION               return 0 if the module is at least version VERSION
+  --exact-version=VERSION                 return 0 if the module is at exactly version VERSION
+  --max-version=VERSION                   return 0 if the module is at no newer than version VERSION
+  --list-all                              list all known packages
+  --debug                                 show verbose debug information
+  --print-errors                          show verbose information about missing or conflicting packages (default unless --exists or --atleast/exact/max-version given on the command line)
+  --silence-errors                        be silent about errors (default when --exists or --atleast/exact/max-version given on the command line)
+  --errors-to-stdout                      print errors from --print-errors to stdout not stderr
+  --print-provides                        print which packages the package provides
+  --print-requires                        print which packages the package requires
+  --print-requires-private                print which packages the package requires for static linking
+  --validate                              validate a package's .pc file
+  --define-prefix                         try to override the value of prefix for each .pc file found with a guesstimated value based on the location of the .pc file
+  --dont-define-prefix                    don't try to override the value of prefix for each .pc file found with a guesstimated value based on the location of the .pc file
+  --prefix-variable=PREFIX                set the name of the variable that pkg-config automatically sets
+
+scons: Configure: yes
+
+scons: Configure: Checking for C header file pthread.h... 
+.sconf_temp/conftest_1.c <-
+  |
+  |#include "pthread.h"
+  |
+  |
+gcc -o .sconf_temp/conftest_1.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -I/usr/local/include .sconf_temp/conftest_1.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+scons: Configure: yes
+
+scons: Configure: Checking for pthread_join() in C library pthread... 
+.sconf_temp/conftest_2.c <-
+  |
+  |
+  |
+  |#ifdef __cplusplus
+  |extern "C"
+  |#endif
+  |char pthread_join();
+  |
+  |int
+  |main() {
+  |  pthread_join();
+  |return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_2.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -I/usr/local/include .sconf_temp/conftest_2.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+== Linking .sconf_temp/conftest_2
+scons: Configure: yes
+
+scons: Configure: Checking that pthread sample program compiles...
+.sconf_temp/conftest_3.c <-
+  |
+  |#include <pthread.h>
+  |#include <stdlib.h>
+  |#define NUM_THREADS 2
+  |void* print_hello(void *thread_id)
+  |{
+  |	pthread_exit(NULL);
+  |}
+  |int main(int argc, char *argv[])
+  |{
+  |	pthread_t threads[NUM_THREADS];
+  |	int rc, t;
+  |	for(t=0;t<NUM_THREADS;t++)
+  |	{
+  |		rc = pthread_create(&threads[t], NULL, print_hello, (void *)t);
+  |		if (rc) exit(-1);
+  |	}
+  |	pthread_exit(NULL);
+  |}
+  |
+gcc -o .sconf_temp/conftest_3.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -I/usr/local/include .sconf_temp/conftest_3.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+.sconf_temp/conftest_3.c: In function ‘main’:
+.sconf_temp/conftest_3.c:15:55: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+   rc = pthread_create(&threads[t], NULL, print_hello, (void *)t);
+                                                       ^
+scons: Configure: yes
+
+scons: Configure: Checking that pthread sample program links...
+.sconf_temp/conftest_4.c <-
+  |
+  |#include <pthread.h>
+  |#include <stdlib.h>
+  |#define NUM_THREADS 2
+  |void* print_hello(void *thread_id)
+  |{
+  |	pthread_exit(NULL);
+  |}
+  |int main(int argc, char *argv[])
+  |{
+  |	pthread_t threads[NUM_THREADS];
+  |	int rc, t;
+  |	for(t=0;t<NUM_THREADS;t++)
+  |	{
+  |		rc = pthread_create(&threads[t], NULL, print_hello, (void *)t);
+  |		if (rc) exit(-1);
+  |	}
+  |	pthread_exit(NULL);
+  |}
+  |
+gcc -o .sconf_temp/conftest_4.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -I/usr/local/include .sconf_temp/conftest_4.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+.sconf_temp/conftest_4.c: In function ‘main’:
+.sconf_temp/conftest_4.c:15:55: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+   rc = pthread_create(&threads[t], NULL, print_hello, (void *)t);
+                                                       ^
+== Linking .sconf_temp/conftest_4
+scons: Configure: yes
+
+scons: Configure: Checking that pthread sample program runs... 
+.sconf_temp/conftest_5.c <-
+  |
+  |#include <pthread.h>
+  |#include <stdlib.h>
+  |#define NUM_THREADS 2
+  |void* print_hello(void *thread_id)
+  |{
+  |	pthread_exit(NULL);
+  |}
+  |int main(int argc, char *argv[])
+  |{
+  |	pthread_t threads[NUM_THREADS];
+  |	int rc, t;
+  |	for(t=0;t<NUM_THREADS;t++)
+  |	{
+  |		rc = pthread_create(&threads[t], NULL, print_hello, (void *)t);
+  |		if (rc) exit(-1);
+  |	}
+  |	pthread_exit(NULL);
+  |}
+  |
+gcc -o .sconf_temp/conftest_5.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -I/usr/local/include .sconf_temp/conftest_5.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+.sconf_temp/conftest_5.c: In function ‘main’:
+.sconf_temp/conftest_5.c:15:55: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+   rc = pthread_create(&threads[t], NULL, print_hello, (void *)t);
+                                                       ^
+== Linking .sconf_temp/conftest_5
+.sconf_temp/conftest_5 > .sconf_temp/conftest_5.out
+scons: Configure: yes
+
+
+file /home/admin/src/CLAM-1.4.0/SConstruct,line 77:
+	Configure(confdir = .sconf_temp)
+scons: Configure: Checking for libxml++-2.6 pkg-config file... 
+pkg-config --cflags --libs libxml++-2.6
+-std=c++11 -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -lxml++-2.6 -lxml2 -lglibmm-2.4 -lgobject-2.0 -lglib-2.0 -lsigc-2.0
+scons: Configure: yes
+
+scons: Configure: Checking that libxml++ sample program compiles...
+.sconf_temp/conftest_7.cxx <-
+  |
+  |#include <libxml++/libxml++.h>
+  |int main( int argc, char** argv )
+  |{
+  |	xmlpp::Document document;
+  |	return 0;
+  |}
+  |
+== Compiling .sconf_temp/conftest_7.cxx
+In file included from /usr/include/libxml++-2.6/libxml++/libxml++.h:53:0,
+                 from .sconf_temp/conftest_7.cxx:2:
+/usr/include/libxml++-2.6/libxml++/parsers/saxparser.h:224:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   std::auto_ptr<_xmlSAXHandler> sax_handler_;
+        ^
+In file included from /usr/include/c++/5/memory:81:0,
+                 from /usr/include/libxml++-2.6/libxml++/parsers/saxparser.h:14,
+                 from /usr/include/libxml++-2.6/libxml++/libxml++.h:53,
+                 from .sconf_temp/conftest_7.cxx:2:
+/usr/include/c++/5/bits/unique_ptr.h:49:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^
+In file included from /usr/include/libxml++-2.6/libxml++/libxml++.h:54:0,
+                 from .sconf_temp/conftest_7.cxx:2:
+/usr/include/libxml++-2.6/libxml++/parsers/textreader.h:260:10: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+     std::auto_ptr<PropertyReader> propertyreader;
+          ^
+In file included from /usr/include/c++/5/memory:81:0,
+                 from /usr/include/libxml++-2.6/libxml++/parsers/saxparser.h:14,
+                 from /usr/include/libxml++-2.6/libxml++/libxml++.h:53,
+                 from .sconf_temp/conftest_7.cxx:2:
+/usr/include/c++/5/bits/unique_ptr.h:49:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^
+In file included from /usr/include/libxml++-2.6/libxml++/libxml++.h:69:0,
+                 from .sconf_temp/conftest_7.cxx:2:
+/usr/include/libxml++-2.6/libxml++/relaxngschema.h:108:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   std::auto_ptr<Impl> pimpl_;
+        ^
+In file included from /usr/include/c++/5/memory:81:0,
+                 from /usr/include/libxml++-2.6/libxml++/parsers/saxparser.h:14,
+                 from /usr/include/libxml++-2.6/libxml++/libxml++.h:53,
+                 from .sconf_temp/conftest_7.cxx:2:
+/usr/include/c++/5/bits/unique_ptr.h:49:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^
+In file included from /usr/include/libxml++-2.6/libxml++/libxml++.h:70:0,
+                 from .sconf_temp/conftest_7.cxx:2:
+/usr/include/libxml++-2.6/libxml++/xsdschema.h:99:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   std::auto_ptr<Impl> pimpl_;
+        ^
+In file included from /usr/include/c++/5/memory:81:0,
+                 from /usr/include/libxml++-2.6/libxml++/parsers/saxparser.h:14,
+                 from /usr/include/libxml++-2.6/libxml++/libxml++.h:53,
+                 from .sconf_temp/conftest_7.cxx:2:
+/usr/include/c++/5/bits/unique_ptr.h:49:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^
+In file included from /usr/include/libxml++-2.6/libxml++/libxml++.h:73:0,
+                 from .sconf_temp/conftest_7.cxx:2:
+/usr/include/libxml++-2.6/libxml++/validators/relaxngvalidator.h:159:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   std::auto_ptr<Impl> pimpl_;
+        ^
+In file included from /usr/include/c++/5/memory:81:0,
+                 from /usr/include/libxml++-2.6/libxml++/parsers/saxparser.h:14,
+                 from /usr/include/libxml++-2.6/libxml++/libxml++.h:53,
+                 from .sconf_temp/conftest_7.cxx:2:
+/usr/include/c++/5/bits/unique_ptr.h:49:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^
+In file included from /usr/include/libxml++-2.6/libxml++/libxml++.h:75:0,
+                 from .sconf_temp/conftest_7.cxx:2:
+/usr/include/libxml++-2.6/libxml++/validators/xsdvalidator.h:149:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   std::auto_ptr<Impl> pimpl_;
+        ^
+In file included from /usr/include/c++/5/memory:81:0,
+                 from /usr/include/libxml++-2.6/libxml++/parsers/saxparser.h:14,
+                 from /usr/include/libxml++-2.6/libxml++/libxml++.h:53,
+                 from .sconf_temp/conftest_7.cxx:2:
+/usr/include/c++/5/bits/unique_ptr.h:49:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^
+scons: Configure: yes
+
+scons: Configure: Checking that libxml++ sample program links...
+.sconf_temp/conftest_8.cxx <-
+  |
+  |#include <libxml++/libxml++.h>
+  |int main( int argc, char** argv )
+  |{
+  |	xmlpp::Document document;
+  |	return 0;
+  |}
+  |
+== Compiling .sconf_temp/conftest_8.cxx
+In file included from /usr/include/libxml++-2.6/libxml++/libxml++.h:53:0,
+                 from .sconf_temp/conftest_8.cxx:2:
+/usr/include/libxml++-2.6/libxml++/parsers/saxparser.h:224:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   std::auto_ptr<_xmlSAXHandler> sax_handler_;
+        ^
+In file included from /usr/include/c++/5/memory:81:0,
+                 from /usr/include/libxml++-2.6/libxml++/parsers/saxparser.h:14,
+                 from /usr/include/libxml++-2.6/libxml++/libxml++.h:53,
+                 from .sconf_temp/conftest_8.cxx:2:
+/usr/include/c++/5/bits/unique_ptr.h:49:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^
+In file included from /usr/include/libxml++-2.6/libxml++/libxml++.h:54:0,
+                 from .sconf_temp/conftest_8.cxx:2:
+/usr/include/libxml++-2.6/libxml++/parsers/textreader.h:260:10: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+     std::auto_ptr<PropertyReader> propertyreader;
+          ^
+In file included from /usr/include/c++/5/memory:81:0,
+                 from /usr/include/libxml++-2.6/libxml++/parsers/saxparser.h:14,
+                 from /usr/include/libxml++-2.6/libxml++/libxml++.h:53,
+                 from .sconf_temp/conftest_8.cxx:2:
+/usr/include/c++/5/bits/unique_ptr.h:49:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^
+In file included from /usr/include/libxml++-2.6/libxml++/libxml++.h:69:0,
+                 from .sconf_temp/conftest_8.cxx:2:
+/usr/include/libxml++-2.6/libxml++/relaxngschema.h:108:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   std::auto_ptr<Impl> pimpl_;
+        ^
+In file included from /usr/include/c++/5/memory:81:0,
+                 from /usr/include/libxml++-2.6/libxml++/parsers/saxparser.h:14,
+                 from /usr/include/libxml++-2.6/libxml++/libxml++.h:53,
+                 from .sconf_temp/conftest_8.cxx:2:
+/usr/include/c++/5/bits/unique_ptr.h:49:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^
+In file included from /usr/include/libxml++-2.6/libxml++/libxml++.h:70:0,
+                 from .sconf_temp/conftest_8.cxx:2:
+/usr/include/libxml++-2.6/libxml++/xsdschema.h:99:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   std::auto_ptr<Impl> pimpl_;
+        ^
+In file included from /usr/include/c++/5/memory:81:0,
+                 from /usr/include/libxml++-2.6/libxml++/parsers/saxparser.h:14,
+                 from /usr/include/libxml++-2.6/libxml++/libxml++.h:53,
+                 from .sconf_temp/conftest_8.cxx:2:
+/usr/include/c++/5/bits/unique_ptr.h:49:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^
+In file included from /usr/include/libxml++-2.6/libxml++/libxml++.h:73:0,
+                 from .sconf_temp/conftest_8.cxx:2:
+/usr/include/libxml++-2.6/libxml++/validators/relaxngvalidator.h:159:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   std::auto_ptr<Impl> pimpl_;
+        ^
+In file included from /usr/include/c++/5/memory:81:0,
+                 from /usr/include/libxml++-2.6/libxml++/parsers/saxparser.h:14,
+                 from /usr/include/libxml++-2.6/libxml++/libxml++.h:53,
+                 from .sconf_temp/conftest_8.cxx:2:
+/usr/include/c++/5/bits/unique_ptr.h:49:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^
+In file included from /usr/include/libxml++-2.6/libxml++/libxml++.h:75:0,
+                 from .sconf_temp/conftest_8.cxx:2:
+/usr/include/libxml++-2.6/libxml++/validators/xsdvalidator.h:149:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   std::auto_ptr<Impl> pimpl_;
+        ^
+In file included from /usr/include/c++/5/memory:81:0,
+                 from /usr/include/libxml++-2.6/libxml++/parsers/saxparser.h:14,
+                 from /usr/include/libxml++-2.6/libxml++/libxml++.h:53,
+                 from .sconf_temp/conftest_8.cxx:2:
+/usr/include/c++/5/bits/unique_ptr.h:49:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^
+== Linking .sconf_temp/conftest_8
+scons: Configure: yes
+
+scons: Configure: Checking that libxml++ sample program runs... 
+.sconf_temp/conftest_9.cxx <-
+  |
+  |#include <libxml++/libxml++.h>
+  |int main( int argc, char** argv )
+  |{
+  |	xmlpp::Document document;
+  |	return 0;
+  |}
+  |
+== Compiling .sconf_temp/conftest_9.cxx
+In file included from /usr/include/libxml++-2.6/libxml++/libxml++.h:53:0,
+                 from .sconf_temp/conftest_9.cxx:2:
+/usr/include/libxml++-2.6/libxml++/parsers/saxparser.h:224:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   std::auto_ptr<_xmlSAXHandler> sax_handler_;
+        ^
+In file included from /usr/include/c++/5/memory:81:0,
+                 from /usr/include/libxml++-2.6/libxml++/parsers/saxparser.h:14,
+                 from /usr/include/libxml++-2.6/libxml++/libxml++.h:53,
+                 from .sconf_temp/conftest_9.cxx:2:
+/usr/include/c++/5/bits/unique_ptr.h:49:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^
+In file included from /usr/include/libxml++-2.6/libxml++/libxml++.h:54:0,
+                 from .sconf_temp/conftest_9.cxx:2:
+/usr/include/libxml++-2.6/libxml++/parsers/textreader.h:260:10: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+     std::auto_ptr<PropertyReader> propertyreader;
+          ^
+In file included from /usr/include/c++/5/memory:81:0,
+                 from /usr/include/libxml++-2.6/libxml++/parsers/saxparser.h:14,
+                 from /usr/include/libxml++-2.6/libxml++/libxml++.h:53,
+                 from .sconf_temp/conftest_9.cxx:2:
+/usr/include/c++/5/bits/unique_ptr.h:49:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^
+In file included from /usr/include/libxml++-2.6/libxml++/libxml++.h:69:0,
+                 from .sconf_temp/conftest_9.cxx:2:
+/usr/include/libxml++-2.6/libxml++/relaxngschema.h:108:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   std::auto_ptr<Impl> pimpl_;
+        ^
+In file included from /usr/include/c++/5/memory:81:0,
+                 from /usr/include/libxml++-2.6/libxml++/parsers/saxparser.h:14,
+                 from /usr/include/libxml++-2.6/libxml++/libxml++.h:53,
+                 from .sconf_temp/conftest_9.cxx:2:
+/usr/include/c++/5/bits/unique_ptr.h:49:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^
+In file included from /usr/include/libxml++-2.6/libxml++/libxml++.h:70:0,
+                 from .sconf_temp/conftest_9.cxx:2:
+/usr/include/libxml++-2.6/libxml++/xsdschema.h:99:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   std::auto_ptr<Impl> pimpl_;
+        ^
+In file included from /usr/include/c++/5/memory:81:0,
+                 from /usr/include/libxml++-2.6/libxml++/parsers/saxparser.h:14,
+                 from /usr/include/libxml++-2.6/libxml++/libxml++.h:53,
+                 from .sconf_temp/conftest_9.cxx:2:
+/usr/include/c++/5/bits/unique_ptr.h:49:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^
+In file included from /usr/include/libxml++-2.6/libxml++/libxml++.h:73:0,
+                 from .sconf_temp/conftest_9.cxx:2:
+/usr/include/libxml++-2.6/libxml++/validators/relaxngvalidator.h:159:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   std::auto_ptr<Impl> pimpl_;
+        ^
+In file included from /usr/include/c++/5/memory:81:0,
+                 from /usr/include/libxml++-2.6/libxml++/parsers/saxparser.h:14,
+                 from /usr/include/libxml++-2.6/libxml++/libxml++.h:53,
+                 from .sconf_temp/conftest_9.cxx:2:
+/usr/include/c++/5/bits/unique_ptr.h:49:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^
+In file included from /usr/include/libxml++-2.6/libxml++/libxml++.h:75:0,
+                 from .sconf_temp/conftest_9.cxx:2:
+/usr/include/libxml++-2.6/libxml++/validators/xsdvalidator.h:149:8: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   std::auto_ptr<Impl> pimpl_;
+        ^
+In file included from /usr/include/c++/5/memory:81:0,
+                 from /usr/include/libxml++-2.6/libxml++/parsers/saxparser.h:14,
+                 from /usr/include/libxml++-2.6/libxml++/libxml++.h:53,
+                 from .sconf_temp/conftest_9.cxx:2:
+/usr/include/c++/5/bits/unique_ptr.h:49:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^
+== Linking .sconf_temp/conftest_9
+.sconf_temp/conftest_9 > .sconf_temp/conftest_9.out
+scons: Configure: yes
+
+scons: Configure: Checking for C header file ladspa.h... 
+.sconf_temp/conftest_10.c <-
+  |
+  |#include "ladspa.h"
+  |
+  |
+gcc -o .sconf_temp/conftest_10.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_10.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+scons: Configure: yes
+
+scons: Configure: Checking that ladspa sample program compiles...
+.sconf_temp/conftest_11.c <-
+  |#include <ladspa.h>
+  |const LADSPA_Descriptor * ladspa_descriptor(unsigned long Index)
+  |{ return 0; }
+  |int main()
+  |{
+  |	ladspa_descriptor(0);
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_11.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_11.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+scons: Configure: yes
+
+scons: Configure: Checking that ladspa sample program links...
+.sconf_temp/conftest_12.c <-
+  |#include <ladspa.h>
+  |const LADSPA_Descriptor * ladspa_descriptor(unsigned long Index)
+  |{ return 0; }
+  |int main()
+  |{
+  |	ladspa_descriptor(0);
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_12.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_12.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+== Linking .sconf_temp/conftest_12
+scons: Configure: yes
+
+scons: Configure: Checking that ladspa sample program runs... 
+.sconf_temp/conftest_13.c <-
+  |#include <ladspa.h>
+  |const LADSPA_Descriptor * ladspa_descriptor(unsigned long Index)
+  |{ return 0; }
+  |int main()
+  |{
+  |	ladspa_descriptor(0);
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_13.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_13.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+== Linking .sconf_temp/conftest_13
+.sconf_temp/conftest_13 > .sconf_temp/conftest_13.out
+scons: Configure: yes
+
+
+file /home/admin/src/CLAM-1.4.0/SConstruct,line 90:
+	Configure(confdir = .sconf_temp)
+scons: Configure: Checking for fftw3 pkg-config file... 
+pkg-config --cflags --libs fftw3
+-lfftw3
+scons: Configure: yes
+
+
+file /home/admin/src/CLAM-1.4.0/SConstruct,line 103:
+	Configure(confdir = .sconf_temp)
+scons: Configure: Checking for C header file sndfile.h... 
+.sconf_temp/conftest_15.c <-
+  |
+  |#include "sndfile.h"
+  |
+  |
+gcc -o .sconf_temp/conftest_15.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_15.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+scons: Configure: yes
+
+scons: Configure: Checking for sf_open_fd() in C library sndfile... 
+.sconf_temp/conftest_16.c <-
+  |
+  |
+  |
+  |#ifdef __cplusplus
+  |extern "C"
+  |#endif
+  |char sf_open_fd();
+  |
+  |int
+  |main() {
+  |  sf_open_fd();
+  |return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_16.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_16.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+== Linking .sconf_temp/conftest_16
+scons: Configure: yes
+
+scons: Configure: Checking that libsndfile sample program compiles...
+.sconf_temp/conftest_17.c <-
+  |#include <sndfile.h>
+  |int main()
+  |{
+  |	SF_INFO sfinfo;
+  |	sf_open_fd(fileno(stdout),SFM_WRITE,&sfinfo,0);
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_17.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_17.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+scons: Configure: yes
+
+scons: Configure: Checking that libsndfile sample program links...
+.sconf_temp/conftest_18.c <-
+  |#include <sndfile.h>
+  |int main()
+  |{
+  |	SF_INFO sfinfo;
+  |	sf_open_fd(fileno(stdout),SFM_WRITE,&sfinfo,0);
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_18.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_18.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+== Linking .sconf_temp/conftest_18
+scons: Configure: yes
+
+scons: Configure: Checking that libsndfile sample program runs... 
+.sconf_temp/conftest_19.c <-
+  |#include <sndfile.h>
+  |int main()
+  |{
+  |	SF_INFO sfinfo;
+  |	sf_open_fd(fileno(stdout),SFM_WRITE,&sfinfo,0);
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_19.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_19.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+== Linking .sconf_temp/conftest_19
+.sconf_temp/conftest_19 > .sconf_temp/conftest_19.out
+scons: Configure: yes
+
+scons: Configure: Checking for vorbisfile vorbisenc vorbis ogg pkg-config file... 
+pkg-config --cflags --libs vorbisfile vorbisenc vorbis ogg
+-lvorbisfile -lvorbisenc -lvorbis -logg
+scons: Configure: yes
+
+scons: Configure: Checking that libogg sample program compiles...
+.sconf_temp/conftest_21.c <-
+  |#include <ogg/ogg.h>
+  |int main( int argc, char** argv )
+  |{
+  |	oggpack_buffer b;
+  |	oggpack_writeinit(&b);
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_21.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_21.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+scons: Configure: yes
+
+scons: Configure: Checking that libogg sample program links...
+.sconf_temp/conftest_22.c <-
+  |#include <ogg/ogg.h>
+  |int main( int argc, char** argv )
+  |{
+  |	oggpack_buffer b;
+  |	oggpack_writeinit(&b);
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_22.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_22.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+== Linking .sconf_temp/conftest_22
+scons: Configure: yes
+
+scons: Configure: Checking that libogg sample program runs... 
+.sconf_temp/conftest_23.c <-
+  |#include <ogg/ogg.h>
+  |int main( int argc, char** argv )
+  |{
+  |	oggpack_buffer b;
+  |	oggpack_writeinit(&b);
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_23.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_23.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+== Linking .sconf_temp/conftest_23
+.sconf_temp/conftest_23 > .sconf_temp/conftest_23.out
+scons: Configure: yes
+
+scons: Configure: Checking that libvorbis sample program compiles...
+.sconf_temp/conftest_24.c <-
+  |#include <vorbis/vorbisenc.h>
+  |int main( int argc, char** argv )
+  |{
+  |	vorbis_info vi;
+  |	vorbis_info_init( &vi );
+  |	vorbis_encode_setup_init( &vi );
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_24.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_24.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+scons: Configure: yes
+
+scons: Configure: Checking that libvorbis sample program links...
+.sconf_temp/conftest_25.c <-
+  |#include <vorbis/vorbisenc.h>
+  |int main( int argc, char** argv )
+  |{
+  |	vorbis_info vi;
+  |	vorbis_info_init( &vi );
+  |	vorbis_encode_setup_init( &vi );
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_25.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_25.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+== Linking .sconf_temp/conftest_25
+scons: Configure: yes
+
+scons: Configure: Checking that libvorbis sample program runs... 
+.sconf_temp/conftest_26.c <-
+  |#include <vorbis/vorbisenc.h>
+  |int main( int argc, char** argv )
+  |{
+  |	vorbis_info vi;
+  |	vorbis_info_init( &vi );
+  |	vorbis_encode_setup_init( &vi );
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_26.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_26.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+== Linking .sconf_temp/conftest_26
+.sconf_temp/conftest_26 > .sconf_temp/conftest_26.out
+scons: Configure: yes
+
+scons: Configure: Checking that libvorbisfile sample program compiles...
+.sconf_temp/conftest_27.c <-
+  |#include <vorbis/vorbisfile.h>
+  |int main( int argc, char** argv )
+  |{
+  |	OggVorbis_File vf;
+  |//	ov_test_open( &vf );
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_27.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_27.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+.sconf_temp/conftest_27.c: In function ‘main’:
+.sconf_temp/conftest_27.c:4:17: warning: unused variable ‘vf’ [-Wunused-variable]
+  OggVorbis_File vf;
+                 ^
+scons: Configure: yes
+
+scons: Configure: Checking that libvorbisfile sample program links...
+.sconf_temp/conftest_28.c <-
+  |#include <vorbis/vorbisfile.h>
+  |int main( int argc, char** argv )
+  |{
+  |	OggVorbis_File vf;
+  |//	ov_test_open( &vf );
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_28.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_28.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+.sconf_temp/conftest_28.c: In function ‘main’:
+.sconf_temp/conftest_28.c:4:17: warning: unused variable ‘vf’ [-Wunused-variable]
+  OggVorbis_File vf;
+                 ^
+== Linking .sconf_temp/conftest_28
+scons: Configure: yes
+
+scons: Configure: Checking that libvorbisfile sample program runs... 
+.sconf_temp/conftest_29.c <-
+  |#include <vorbis/vorbisfile.h>
+  |int main( int argc, char** argv )
+  |{
+  |	OggVorbis_File vf;
+  |//	ov_test_open( &vf );
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_29.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_29.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+.sconf_temp/conftest_29.c: In function ‘main’:
+.sconf_temp/conftest_29.c:4:17: warning: unused variable ‘vf’ [-Wunused-variable]
+  OggVorbis_File vf;
+                 ^
+== Linking .sconf_temp/conftest_29
+.sconf_temp/conftest_29 > .sconf_temp/conftest_29.out
+scons: Configure: yes
+
+scons: Configure: Checking for mad pkg-config file... 
+pkg-config --cflags --libs mad
+-lmad
+scons: Configure: yes
+
+scons: Configure: Checking that libmad sample program compiles...
+.sconf_temp/conftest_31.c <-
+  |#include<mad.h>
+  |int main()
+  |{
+  |	struct mad_stream s;
+  |	mad_stream_init(&s);
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_31.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_31.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+scons: Configure: yes
+
+scons: Configure: Checking that libmad sample program links...
+.sconf_temp/conftest_32.c <-
+  |#include<mad.h>
+  |int main()
+  |{
+  |	struct mad_stream s;
+  |	mad_stream_init(&s);
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_32.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_32.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+== Linking .sconf_temp/conftest_32
+scons: Configure: yes
+
+scons: Configure: Checking that libmad sample program runs... 
+.sconf_temp/conftest_33.c <-
+  |#include<mad.h>
+  |int main()
+  |{
+  |	struct mad_stream s;
+  |	mad_stream_init(&s);
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_33.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_33.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+== Linking .sconf_temp/conftest_33
+.sconf_temp/conftest_33 > .sconf_temp/conftest_33.out
+scons: Configure: yes
+
+scons: Configure: Checking for uncompress() in C library z... 
+.sconf_temp/conftest_34.c <-
+  |
+  |
+  |
+  |#ifdef __cplusplus
+  |extern "C"
+  |#endif
+  |char uncompress();
+  |
+  |int
+  |main() {
+  |  uncompress();
+  |return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_34.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_34.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+== Linking .sconf_temp/conftest_34
+scons: Configure: yes
+
+scons: Configure: Checking for C++ header file id3.h... 
+.sconf_temp/conftest_35.cpp <-
+  |
+  |#include "id3.h"
+  |
+  |
+== Compiling .sconf_temp/conftest_35.cpp
+scons: Configure: yes
+
+scons: Configure: Checking for ID3_Tag myTag in C++ library id3... 
+.sconf_temp/conftest_36.cpp <-
+  |
+  |
+  |#include "id3/tag.h"
+  |
+  |int
+  |main() {
+  |  ID3_Tag myTag;
+  |return 0;
+  |}
+  |
+== Compiling .sconf_temp/conftest_36.cpp
+== Linking .sconf_temp/conftest_36
+scons: Configure: yes
+
+scons: Configure: Checking that id3 sample program compiles...
+.sconf_temp/conftest_37.cxx <-
+  |#include <id3.h>
+  |#include <id3/tag.h>
+  |int main()
+  |{
+  |	ID3_Tag myTag;
+  |	return 0;
+  |}
+  |
+== Compiling .sconf_temp/conftest_37.cxx
+scons: Configure: yes
+
+scons: Configure: Checking that id3 sample program links...
+.sconf_temp/conftest_38.cxx <-
+  |#include <id3.h>
+  |#include <id3/tag.h>
+  |int main()
+  |{
+  |	ID3_Tag myTag;
+  |	return 0;
+  |}
+  |
+== Compiling .sconf_temp/conftest_38.cxx
+== Linking .sconf_temp/conftest_38
+scons: Configure: yes
+
+scons: Configure: Checking that id3 sample program runs... 
+.sconf_temp/conftest_39.cxx <-
+  |#include <id3.h>
+  |#include <id3/tag.h>
+  |int main()
+  |{
+  |	ID3_Tag myTag;
+  |	return 0;
+  |}
+  |
+== Compiling .sconf_temp/conftest_39.cxx
+== Linking .sconf_temp/conftest_39
+.sconf_temp/conftest_39 > .sconf_temp/conftest_39.out
+scons: Configure: yes
+
+scons: Configure: Checking for alsa pkg-config file... 
+pkg-config --cflags --libs alsa
+-I/usr/include/alsa -lasound
+scons: Configure: yes
+
+scons: Configure: Checking that libasound sample program compiles...
+.sconf_temp/conftest_41.c <-
+  |#include<alsa/asoundlib.h>
+  |int main()
+  |{
+  |	int card = 0;
+  |	snd_card_next(&card);
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_41.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_41.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+scons: Configure: yes
+
+scons: Configure: Checking that libasound sample program links...
+.sconf_temp/conftest_42.c <-
+  |#include<alsa/asoundlib.h>
+  |int main()
+  |{
+  |	int card = 0;
+  |	snd_card_next(&card);
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_42.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_42.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+== Linking .sconf_temp/conftest_42
+scons: Configure: yes
+
+scons: Configure: Checking that libasound sample program runs... 
+.sconf_temp/conftest_43.c <-
+  |#include<alsa/asoundlib.h>
+  |int main()
+  |{
+  |	int card = 0;
+  |	snd_card_next(&card);
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_43.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_43.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+== Linking .sconf_temp/conftest_43
+.sconf_temp/conftest_43 > .sconf_temp/conftest_43.out
+scons: Configure: yes
+
+scons: Configure: Checking for jack pkg-config file... 
+pkg-config --cflags --libs jack
+-ljack
+scons: Configure: yes
+
+scons: Configure: Checking that jack sample program compiles...
+.sconf_temp/conftest_45.c <-
+  |#include <jack/jack.h>
+  |#include <stdlib.h>
+  |jack_client_t *client;
+  |int main()
+  |{
+  |	client = jack_client_open ("foo", JackUseExactName, NULL);
+  |	if ( client != NULL )
+  |		jack_client_close (client);
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_45.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_45.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+scons: Configure: yes
+
+scons: Configure: Checking that jack sample program links...
+.sconf_temp/conftest_46.c <-
+  |#include <jack/jack.h>
+  |#include <stdlib.h>
+  |jack_client_t *client;
+  |int main()
+  |{
+  |	client = jack_client_open ("foo", JackUseExactName, NULL);
+  |	if ( client != NULL )
+  |		jack_client_close (client);
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_46.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_46.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+== Linking .sconf_temp/conftest_46
+scons: Configure: yes
+
+scons: Configure: Checking that jack sample program runs... 
+.sconf_temp/conftest_47.c <-
+  |#include <jack/jack.h>
+  |#include <stdlib.h>
+  |jack_client_t *client;
+  |int main()
+  |{
+  |	client = jack_client_open ("foo", JackUseExactName, NULL);
+  |	if ( client != NULL )
+  |		jack_client_close (client);
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_47.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_47.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+== Linking .sconf_temp/conftest_47
+.sconf_temp/conftest_47 > .sconf_temp/conftest_47.out
+scons: Configure: yes
+
+scons: Configure: Checking for C header file portaudio.h... 
+.sconf_temp/conftest_48.c <-
+  |
+  |#include "portaudio.h"
+  |
+  |
+gcc -o .sconf_temp/conftest_48.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_48.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+scons: Configure: yes
+
+scons: Configure: Checking for Pa_GetHostApiInfo() in C library portaudio... 
+.sconf_temp/conftest_49.c <-
+  |
+  |
+  |
+  |#ifdef __cplusplus
+  |extern "C"
+  |#endif
+  |char Pa_GetHostApiInfo();
+  |
+  |int
+  |main() {
+  |  Pa_GetHostApiInfo();
+  |return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_49.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_49.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+== Linking .sconf_temp/conftest_49
+scons: Configure: yes
+
+scons: Configure: Checking that portaudio sample program compiles...
+.sconf_temp/conftest_50.c <-
+  |#include <portaudio.h>
+  |int main()
+  |{
+  |	int version = Pa_GetVersion();
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_50.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_50.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+.sconf_temp/conftest_50.c: In function ‘main’:
+.sconf_temp/conftest_50.c:4:6: warning: unused variable ‘version’ [-Wunused-variable]
+  int version = Pa_GetVersion();
+      ^
+scons: Configure: yes
+
+scons: Configure: Checking that portaudio sample program links...
+.sconf_temp/conftest_51.c <-
+  |#include <portaudio.h>
+  |int main()
+  |{
+  |	int version = Pa_GetVersion();
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_51.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_51.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+.sconf_temp/conftest_51.c: In function ‘main’:
+.sconf_temp/conftest_51.c:4:6: warning: unused variable ‘version’ [-Wunused-variable]
+  int version = Pa_GetVersion();
+      ^
+== Linking .sconf_temp/conftest_51
+scons: Configure: yes
+
+scons: Configure: Checking that portaudio sample program runs... 
+.sconf_temp/conftest_52.c <-
+  |#include <portaudio.h>
+  |int main()
+  |{
+  |	int version = Pa_GetVersion();
+  |	return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_52.o -c -g -O3 -fomit-frame-pointer -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_52.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
+cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
+.sconf_temp/conftest_52.c: In function ‘main’:
+.sconf_temp/conftest_52.c:4:6: warning: unused variable ‘version’ [-Wunused-variable]
+  int version = Pa_GetVersion();
+      ^
+== Linking .sconf_temp/conftest_52
+.sconf_temp/conftest_52 > .sconf_temp/conftest_52.out
+scons: Configure: yes
+
+
