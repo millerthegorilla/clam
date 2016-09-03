@@ -1,0 +1,4 @@
+/scons
+/.sconf_temp
+/.sconsign.dblite
+!/scons/libs/*.py
