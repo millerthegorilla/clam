@@ -113,7 +113,7 @@ def configureModules( clam_env ) :
 	save_config_file_from_env(core_env, 'scons/libs/core')
 	processing_env = configure_processing(core_env)
 	save_config_file_from_env(processing_env, 'scons/libs/processing')
-	audioio_env = configure_audioio(core_env)
+	audioio_env = configure_audioio(processing_env)
 	save_config_file_from_env(audioio_env, 'scons/libs/audioio')
 
 # helper functions

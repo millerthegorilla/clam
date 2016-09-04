@@ -7,9 +7,15 @@ env=processing_env
 moduleDependencies = ['core']
 
 folders = [
+	'src/Storage/XML',
+	'src/Standard',
+	'src/Defines',
 	'src/Data/BasicProcessing',
 	'src/Data/Descriptors',
 	'src/Data/Descriptors/Melody',
+	'src/Data/Editable',
+	'src/Flow/Ports',
+	'src/Processing/Base',
 	'src/Processing/Analysis',
 	'src/Processing/Analysis/Tonal',
 	'src/Processing/ArithOps',
@@ -27,8 +33,8 @@ folders = [
 	]
 
 blacklist = [
-	r'^Audio\.hxx',
-	r'^Audio\.cxx',
+	#r'^Audio\.hxx',
+	#r'^Audio\.cxx',
 	]
 
 if not env.get('with_mad') :

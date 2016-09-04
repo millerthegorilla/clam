@@ -31,6 +31,10 @@
 #include <string>
 #include <sstream>
 
+#ifdef XERCES_CPP_NAMESPACE_USE
+XERCES_CPP_NAMESPACE_USE
+#endif
+
 namespace CLAM
 {
 	void XercesDomWriter::write(std::ostream & target, xercesc::DOMNode * node)

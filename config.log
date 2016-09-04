@@ -518,7 +518,7 @@ scons: Configure: Checking for C header file sndfile.h...
   |#include "sndfile.h"
   |
   |
-gcc -o .sconf_temp/conftest_15.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_15.c
+gcc -o .sconf_temp/conftest_15.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_15.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 scons: Configure: yes
@@ -539,7 +539,7 @@ scons: Configure: Checking for sf_open_fd() in C library sndfile...
   |return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_16.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_16.c
+gcc -o .sconf_temp/conftest_16.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_16.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_16
@@ -555,7 +555,7 @@ scons: Configure: Checking that libsndfile sample program compiles...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_17.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_17.c
+gcc -o .sconf_temp/conftest_17.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_17.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 scons: Configure: yes
@@ -570,7 +570,7 @@ scons: Configure: Checking that libsndfile sample program links...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_18.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_18.c
+gcc -o .sconf_temp/conftest_18.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_18.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_18
@@ -586,7 +586,7 @@ scons: Configure: Checking that libsndfile sample program runs...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_19.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_19.c
+gcc -o .sconf_temp/conftest_19.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_19.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_19
@@ -608,7 +608,7 @@ scons: Configure: Checking that libogg sample program compiles...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_21.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_21.c
+gcc -o .sconf_temp/conftest_21.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_21.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 scons: Configure: yes
@@ -623,7 +623,7 @@ scons: Configure: Checking that libogg sample program links...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_22.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_22.c
+gcc -o .sconf_temp/conftest_22.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_22.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_22
@@ -639,7 +639,7 @@ scons: Configure: Checking that libogg sample program runs...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_23.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_23.c
+gcc -o .sconf_temp/conftest_23.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_23.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_23
@@ -657,7 +657,7 @@ scons: Configure: Checking that libvorbis sample program compiles...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_24.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_24.c
+gcc -o .sconf_temp/conftest_24.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_24.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 scons: Configure: yes
@@ -673,7 +673,7 @@ scons: Configure: Checking that libvorbis sample program links...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_25.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_25.c
+gcc -o .sconf_temp/conftest_25.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_25.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_25
@@ -690,7 +690,7 @@ scons: Configure: Checking that libvorbis sample program runs...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_26.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_26.c
+gcc -o .sconf_temp/conftest_26.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_26.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_26
@@ -707,7 +707,7 @@ scons: Configure: Checking that libvorbisfile sample program compiles...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_27.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_27.c
+gcc -o .sconf_temp/conftest_27.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_27.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 .sconf_temp/conftest_27.c: In function ‘main’:
@@ -726,7 +726,7 @@ scons: Configure: Checking that libvorbisfile sample program links...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_28.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_28.c
+gcc -o .sconf_temp/conftest_28.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_28.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 .sconf_temp/conftest_28.c: In function ‘main’:
@@ -746,7 +746,7 @@ scons: Configure: Checking that libvorbisfile sample program runs...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_29.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_29.c
+gcc -o .sconf_temp/conftest_29.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_29.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 .sconf_temp/conftest_29.c: In function ‘main’:
@@ -772,7 +772,7 @@ scons: Configure: Checking that libmad sample program compiles...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_31.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_31.c
+gcc -o .sconf_temp/conftest_31.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_31.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 scons: Configure: yes
@@ -787,7 +787,7 @@ scons: Configure: Checking that libmad sample program links...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_32.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_32.c
+gcc -o .sconf_temp/conftest_32.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_32.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_32
@@ -803,7 +803,7 @@ scons: Configure: Checking that libmad sample program runs...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_33.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_33.c
+gcc -o .sconf_temp/conftest_33.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_33.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_33
@@ -826,7 +826,7 @@ scons: Configure: Checking for uncompress() in C library z...
   |return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_34.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_34.c
+gcc -o .sconf_temp/conftest_34.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include .sconf_temp/conftest_34.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_34
@@ -914,7 +914,7 @@ scons: Configure: Checking that libasound sample program compiles...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_41.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_41.c
+gcc -o .sconf_temp/conftest_41.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_41.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 scons: Configure: yes
@@ -929,7 +929,7 @@ scons: Configure: Checking that libasound sample program links...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_42.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_42.c
+gcc -o .sconf_temp/conftest_42.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_42.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_42
@@ -945,7 +945,7 @@ scons: Configure: Checking that libasound sample program runs...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_43.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_43.c
+gcc -o .sconf_temp/conftest_43.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_43.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_43
@@ -970,7 +970,7 @@ scons: Configure: Checking that jack sample program compiles...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_45.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_45.c
+gcc -o .sconf_temp/conftest_45.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_45.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 scons: Configure: yes
@@ -988,7 +988,7 @@ scons: Configure: Checking that jack sample program links...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_46.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_46.c
+gcc -o .sconf_temp/conftest_46.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_46.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_46
@@ -1007,7 +1007,7 @@ scons: Configure: Checking that jack sample program runs...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_47.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_47.c
+gcc -o .sconf_temp/conftest_47.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_47.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_47
@@ -1020,7 +1020,7 @@ scons: Configure: Checking for C header file portaudio.h...
   |#include "portaudio.h"
   |
   |
-gcc -o .sconf_temp/conftest_48.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_48.c
+gcc -o .sconf_temp/conftest_48.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_48.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 scons: Configure: yes
@@ -1041,7 +1041,7 @@ scons: Configure: Checking for Pa_GetHostApiInfo() in C library portaudio...
   |return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_49.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_49.c
+gcc -o .sconf_temp/conftest_49.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_49.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_49
@@ -1056,7 +1056,7 @@ scons: Configure: Checking that portaudio sample program compiles...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_50.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_50.c
+gcc -o .sconf_temp/conftest_50.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_50.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 .sconf_temp/conftest_50.c: In function ‘main’:
@@ -1074,7 +1074,7 @@ scons: Configure: Checking that portaudio sample program links...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_51.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_51.c
+gcc -o .sconf_temp/conftest_51.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_51.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 .sconf_temp/conftest_51.c: In function ‘main’:
@@ -1093,7 +1093,7 @@ scons: Configure: Checking that portaudio sample program runs...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_52.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_52.c
+gcc -o .sconf_temp/conftest_52.o -c -g -Wall -fpermissive -std=c++0x -DCLAM_FLOAT -D_DEBUG -DUSE_XMLPP=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_FFTW3=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/alsa .sconf_temp/conftest_52.c
 cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 cc1: warning: command line option ‘-fpermissive’ is valid for C++/ObjC++ but not for C
 .sconf_temp/conftest_52.c: In function ‘main’:

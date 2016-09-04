@@ -24,6 +24,9 @@
 #include <xercesc/util/XercesDefs.hpp>
 #include <iosfwd>
 
+#ifdef XERCES_CPP_NAMESPACE_USE
+XERCES_CPP_NAMESPACE_USE
+#endif
 
 namespace XERCES_CPP_NAMESPACE
 {
