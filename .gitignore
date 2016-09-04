@@ -1,4 +1,11 @@
-/scons
-/.sconf_temp
-/.sconsign.dblite
-!/scons/libs/*.py
+scons
+.sconf_temp
+.sconsign.dblite
+!scons/libs/*.py
+!scons/libs/flags.conf
+!scons/libs/processing/flags.conf
+!scons/libs/processing/SConscript
+!scons/libs/core/flags.conf
+!scons/libs/core/SConscript
+!scons/libs/audioio/flags.conf
+!scons/libs/audioio/SConscript
