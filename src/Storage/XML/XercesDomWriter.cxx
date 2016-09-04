@@ -26,7 +26,7 @@
 #include <xercesc/dom/DOMImplementation.hpp>
 #include <xercesc/dom/DOMImplementationLS.hpp>
 #include <xercesc/dom/DOMImplementationRegistry.hpp>
-#include <xercesc/dom/DOMWriter.hpp>
+#include <xercesc/dom/DOMLSSerializer.hpp>
 #include <xercesc/framework/MemBufFormatTarget.hpp>
 #include <string>
 #include <sstream>
@@ -39,19 +39,37 @@ namespace CLAM
 {
 	void XercesDomWriter::write(std::ostream & target, xercesc::DOMNode * node)
 	{
+		xercesc::DOMLSSerializer* xercesWriter = NULL;
+		xercesc::DOMLSOutput* theOutputDesc = NULL; //ouput destination
+		xercesc::DOMConfiguration* dcfg = NULL; //configuration obj
+		xercesc::XMLFormatTarget* memTarget = NULL; //to hold the bytestream		
+		
+		XMLCh tempStr[100];
+		XMLString::transcode("LS", tempStr, 99);
+		
 		XercesInitializer::require();
 		const XMLCh * propertyCanonical = xercesc::XMLUni::fgDOMWRTCanonicalForm;
 		const XMLCh * propertyPrettyPrint = xercesc::XMLUni::fgDOMWRTFormatPrettyPrint;
 		xercesc::DOMImplementation *impl = 
-			xercesc::DOMImplementationRegistry::getDOMImplementation(U("LS"));
-		xercesc::DOMWriter *xercesWriter = 
-			((xercesc::DOMImplementationLS*)impl)->createDOMWriter();
+			xercesc::DOMImplementationRegistry::getDOMImplementation(tempStr);
+		CHECKNULL(impl, L"MgXmlUtil.ToBytes");
+		xercesWriter = ((DOMImplementationLS*)impl)->createLSSerializer();
+		theOutputDesc = ((DOMImplementationLS*)impl)->createLSOutput();
+		CHECKNULL(theSerializer, L"MgXmlUtil.ToBytes");
+		CHECKNULL(theOutputDesc, L"MgXmlUtil.ToBytes");
+    
+		dcfg = xercesWriter->getDomConfig();
+		
+		if (dcfg->canSetParameter(propertyPrettyPrint, mShouldIndent))
+			dcfg->setParameter(propertyPrettyPrint, mShouldIndent);
+		if (dcfg->canSetParameter(propertyCanonical, mShouldCanonicalize))
+			dcfg->setParameter(propertyCanonical, mShouldCanonicalize);
 
-		if (xercesWriter->canSetFeature(propertyPrettyPrint, mShouldIndent))
-			xercesWriter->setFeature(propertyPrettyPrint, mShouldIndent);
-		if (xercesWriter->canSetFeature(propertyCanonical, mShouldCanonicalize))
-			xercesWriter->setFeature(propertyCanonical, mShouldCanonicalize);
-
+		// set user specified output encoding
+		XMLCh encodeStr[100];
+		XMLString::transcode("UTF-8", encodeStr, 99);
+		theOutputDesc->setEncoding(encodeStr);
+		
 		xercesc::MemBufFormatTarget * xercesTarget = new xercesc::MemBufFormatTarget();
 		xercesWriter->writeNode(xercesTarget, *node);
 		const char * buffer = (char *) xercesTarget->getRawBuffer();
