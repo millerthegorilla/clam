@@ -27,6 +27,8 @@
 #include <xercesc/dom/DOMImplementationLS.hpp>
 #include <xercesc/dom/DOMImplementationRegistry.hpp>
 #include <xercesc/dom/DOMLSSerializer.hpp>
+#include <xercesc/dom/DOMConfiguration.hpp>
+#include <xercesc/dom/DOMLSOutput.hpp> 
 #include <xercesc/framework/MemBufFormatTarget.hpp>
 #include <string>
 #include <sstream>
@@ -50,14 +52,13 @@ namespace CLAM
 		XercesInitializer::require();
 		const XMLCh * propertyCanonical = xercesc::XMLUni::fgDOMWRTCanonicalForm;
 		const XMLCh * propertyPrettyPrint = xercesc::XMLUni::fgDOMWRTFormatPrettyPrint;
-		xercesc::DOMImplementation *impl = 
-			xercesc::DOMImplementationRegistry::getDOMImplementation(tempStr);
+		xercesc::DOMImplementation *impl = xercesc::DOMImplementationRegistry::getDOMImplementation(tempStr);
 		CHECKNULL(impl, L"MgXmlUtil.ToBytes");
 		xercesWriter = ((DOMImplementationLS*)impl)->createLSSerializer();
 		theOutputDesc = ((DOMImplementationLS*)impl)->createLSOutput();
 		CHECKNULL(theSerializer, L"MgXmlUtil.ToBytes");
 		CHECKNULL(theOutputDesc, L"MgXmlUtil.ToBytes");
-    
+		theOutputDesc->
 		dcfg = xercesWriter->getDomConfig();
 		
 		if (dcfg->canSetParameter(propertyPrettyPrint, mShouldIndent))
