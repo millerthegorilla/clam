@@ -27,7 +27,7 @@
 #include "SDIFFrame.hxx"
 #include "SDIFMatrix.hxx"
 #include "SDIFStorage.hxx"
-#include "ByteOrder.hxx"
+//#include "ByteOrder.hxx"
 
 #ifndef WIN32
 	#ifdef macintosh
@@ -42,6 +42,8 @@
   #include <io.h>
 #endif
 
+#include <limits.h>
+#include <stdint.h>
 /** Used to read or write an SDIF file. When reading, the File
 * parses the whole files and passes the read Frames to a
 * Storage, typically a Collection to store all in memory.
@@ -194,13 +196,27 @@ inline bool File::Done(void)
 inline void File::FixByteOrder(CLAM::TByte* ptr,
 	CLAM::TUInt32 nElems,CLAM::TUInt32 elemSize)
 {
-#ifdef CLAM_LITTLE_ENDIAN
+	
+
+#if CHAR_BIT != 8
+#error "unsupported char size"
+#endif
+
+enum
+{
+    LITTLE_ENDIAN_032 = 0x03020100ul,
+    BIG_ENDIAN_032 = 0x00010203ul,
+    PDP_ENDIAN_032 = 0x01000302ul
+};
+
+static const union { unsigned char bytes[4]; uint32_t value; } o32_host_order =
+    { { 0, 1, 2, 3 } };
+
+ if (o32_host_order.value == LITTLE_ENDIAN_032)
+ {
 	_FixByteOrder(ptr,nElems,elemSize);
-#else
-#ifndef CLAM_BIG_ENDIAN
-#pragma message ("BYTE ORDER NOT DEFINED!")
-#endif
-#endif
+ }
+
 }
 
 }

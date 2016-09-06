@@ -60,7 +60,8 @@ scons: Configure: Checking for C header file pthread.h...
   |#include "pthread.h"
   |
   |
-gcc -o .sconf_temp/conftest_3.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_3.c
+gcc -o .sconf_temp/conftest_3.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_3.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 scons: Configure: yes
 
 scons: Configure: Checking for pthread_join() in C library pthread... 
@@ -79,7 +80,8 @@ scons: Configure: Checking for pthread_join() in C library pthread...
   |return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_4.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_4.c
+gcc -o .sconf_temp/conftest_4.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_4.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_4
 scons: Configure: yes
 
@@ -105,7 +107,8 @@ scons: Configure: Checking that pthread sample program compiles...
   |	pthread_exit(NULL);
   |}
   |
-gcc -o .sconf_temp/conftest_5.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_5.c
+gcc -o .sconf_temp/conftest_5.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_5.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 .sconf_temp/conftest_5.c: In function ‘main’:
 .sconf_temp/conftest_5.c:15:55: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
    rc = pthread_create(&threads[t], NULL, print_hello, (void *)t);
@@ -134,7 +137,8 @@ scons: Configure: Checking that pthread sample program links...
   |	pthread_exit(NULL);
   |}
   |
-gcc -o .sconf_temp/conftest_6.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_6.c
+gcc -o .sconf_temp/conftest_6.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_6.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 .sconf_temp/conftest_6.c: In function ‘main’:
 .sconf_temp/conftest_6.c:15:55: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
    rc = pthread_create(&threads[t], NULL, print_hello, (void *)t);
@@ -164,7 +168,8 @@ scons: Configure: Checking that pthread sample program runs...
   |	pthread_exit(NULL);
   |}
   |
-gcc -o .sconf_temp/conftest_7.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_7.c
+gcc -o .sconf_temp/conftest_7.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_7.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 .sconf_temp/conftest_7.c: In function ‘main’:
 .sconf_temp/conftest_7.c:15:55: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
    rc = pthread_create(&threads[t], NULL, print_hello, (void *)t);
@@ -236,7 +241,8 @@ scons: Configure: Checking for C header file ladspa.h...
   |#include "ladspa.h"
   |
   |
-gcc -o .sconf_temp/conftest_12.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_12.c
+gcc -o .sconf_temp/conftest_12.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_12.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 scons: Configure: yes
 
 scons: Configure: Checking that ladspa sample program compiles...
@@ -250,7 +256,8 @@ scons: Configure: Checking that ladspa sample program compiles...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_13.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_13.c
+gcc -o .sconf_temp/conftest_13.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_13.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 scons: Configure: yes
 
 scons: Configure: Checking that ladspa sample program links...
@@ -264,7 +271,8 @@ scons: Configure: Checking that ladspa sample program links...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_14.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_14.c
+gcc -o .sconf_temp/conftest_14.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_14.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_14
 scons: Configure: yes
 
@@ -279,7 +287,8 @@ scons: Configure: Checking that ladspa sample program runs...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_15.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_15.c
+gcc -o .sconf_temp/conftest_15.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_15.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_15
 .sconf_temp/conftest_15 > .sconf_temp/conftest_15.out
 scons: Configure: yes
@@ -301,7 +310,8 @@ scons: Configure: Checking for C header file sndfile.h...
   |#include "sndfile.h"
   |
   |
-gcc -o .sconf_temp/conftest_17.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_17.c
+gcc -o .sconf_temp/conftest_17.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_17.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 scons: Configure: yes
 
 scons: Configure: Checking for sf_open_fd() in C library sndfile... 
@@ -320,7 +330,8 @@ scons: Configure: Checking for sf_open_fd() in C library sndfile...
   |return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_18.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_18.c
+gcc -o .sconf_temp/conftest_18.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_18.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_18
 scons: Configure: yes
 
@@ -334,7 +345,8 @@ scons: Configure: Checking that libsndfile sample program compiles...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_19.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_19.c
+gcc -o .sconf_temp/conftest_19.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_19.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 scons: Configure: yes
 
 scons: Configure: Checking that libsndfile sample program links...
@@ -347,7 +359,8 @@ scons: Configure: Checking that libsndfile sample program links...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_20.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_20.c
+gcc -o .sconf_temp/conftest_20.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_20.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_20
 scons: Configure: yes
 
@@ -361,7 +374,8 @@ scons: Configure: Checking that libsndfile sample program runs...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_21.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_21.c
+gcc -o .sconf_temp/conftest_21.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_21.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_21
 .sconf_temp/conftest_21 > .sconf_temp/conftest_21.out
 scons: Configure: yes
@@ -381,7 +395,8 @@ scons: Configure: Checking that libogg sample program compiles...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_23.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_23.c
+gcc -o .sconf_temp/conftest_23.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_23.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 scons: Configure: yes
 
 scons: Configure: Checking that libogg sample program links...
@@ -394,7 +409,8 @@ scons: Configure: Checking that libogg sample program links...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_24.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_24.c
+gcc -o .sconf_temp/conftest_24.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_24.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_24
 scons: Configure: yes
 
@@ -408,7 +424,8 @@ scons: Configure: Checking that libogg sample program runs...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_25.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_25.c
+gcc -o .sconf_temp/conftest_25.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_25.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_25
 .sconf_temp/conftest_25 > .sconf_temp/conftest_25.out
 scons: Configure: yes
@@ -424,7 +441,8 @@ scons: Configure: Checking that libvorbis sample program compiles...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_26.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_26.c
+gcc -o .sconf_temp/conftest_26.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_26.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 scons: Configure: yes
 
 scons: Configure: Checking that libvorbis sample program links...
@@ -438,7 +456,8 @@ scons: Configure: Checking that libvorbis sample program links...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_27.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_27.c
+gcc -o .sconf_temp/conftest_27.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_27.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_27
 scons: Configure: yes
 
@@ -453,7 +472,8 @@ scons: Configure: Checking that libvorbis sample program runs...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_28.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_28.c
+gcc -o .sconf_temp/conftest_28.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_28.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_28
 .sconf_temp/conftest_28 > .sconf_temp/conftest_28.out
 scons: Configure: yes
@@ -468,7 +488,8 @@ scons: Configure: Checking that libvorbisfile sample program compiles...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_29.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_29.c
+gcc -o .sconf_temp/conftest_29.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_29.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 .sconf_temp/conftest_29.c: In function ‘main’:
 .sconf_temp/conftest_29.c:4:17: warning: unused variable ‘vf’ [-Wunused-variable]
   OggVorbis_File vf;
@@ -485,7 +506,8 @@ scons: Configure: Checking that libvorbisfile sample program links...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_30.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_30.c
+gcc -o .sconf_temp/conftest_30.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_30.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 .sconf_temp/conftest_30.c: In function ‘main’:
 .sconf_temp/conftest_30.c:4:17: warning: unused variable ‘vf’ [-Wunused-variable]
   OggVorbis_File vf;
@@ -503,7 +525,8 @@ scons: Configure: Checking that libvorbisfile sample program runs...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_31.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_31.c
+gcc -o .sconf_temp/conftest_31.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_31.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 .sconf_temp/conftest_31.c: In function ‘main’:
 .sconf_temp/conftest_31.c:4:17: warning: unused variable ‘vf’ [-Wunused-variable]
   OggVorbis_File vf;
@@ -527,7 +550,8 @@ scons: Configure: Checking that libmad sample program compiles...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_33.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_33.c
+gcc -o .sconf_temp/conftest_33.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_33.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 scons: Configure: yes
 
 scons: Configure: Checking that libmad sample program links...
@@ -540,7 +564,8 @@ scons: Configure: Checking that libmad sample program links...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_34.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_34.c
+gcc -o .sconf_temp/conftest_34.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_34.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_34
 scons: Configure: yes
 
@@ -554,7 +579,8 @@ scons: Configure: Checking that libmad sample program runs...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_35.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_35.c
+gcc -o .sconf_temp/conftest_35.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_35.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_35
 .sconf_temp/conftest_35 > .sconf_temp/conftest_35.out
 scons: Configure: yes
@@ -575,7 +601,8 @@ scons: Configure: Checking for uncompress() in C library z...
   |return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_36.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_36.c
+gcc -o .sconf_temp/conftest_36.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 .sconf_temp/conftest_36.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_36
 scons: Configure: yes
 
@@ -661,7 +688,8 @@ scons: Configure: Checking that libasound sample program compiles...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_43.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/alsa .sconf_temp/conftest_43.c
+gcc -o .sconf_temp/conftest_43.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/alsa .sconf_temp/conftest_43.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 scons: Configure: yes
 
 scons: Configure: Checking that libasound sample program links...
@@ -674,7 +702,8 @@ scons: Configure: Checking that libasound sample program links...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_44.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/alsa .sconf_temp/conftest_44.c
+gcc -o .sconf_temp/conftest_44.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/alsa .sconf_temp/conftest_44.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_44
 scons: Configure: yes
 
@@ -688,7 +717,8 @@ scons: Configure: Checking that libasound sample program runs...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_45.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/alsa .sconf_temp/conftest_45.c
+gcc -o .sconf_temp/conftest_45.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/alsa .sconf_temp/conftest_45.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_45
 .sconf_temp/conftest_45 > .sconf_temp/conftest_45.out
 scons: Configure: yes
@@ -711,7 +741,8 @@ scons: Configure: Checking that jack sample program compiles...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_47.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/alsa .sconf_temp/conftest_47.c
+gcc -o .sconf_temp/conftest_47.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/alsa .sconf_temp/conftest_47.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 .sconf_temp/conftest_47.c: In function ‘main’:
 .sconf_temp/conftest_47.c:6:2: warning: ‘jack_client_new’ is deprecated [-Wdeprecated-declarations]
   client = jack_client_new ("foo");
@@ -735,7 +766,8 @@ scons: Configure: Checking that jack sample program links...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_48.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/alsa .sconf_temp/conftest_48.c
+gcc -o .sconf_temp/conftest_48.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/alsa .sconf_temp/conftest_48.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 .sconf_temp/conftest_48.c: In function ‘main’:
 .sconf_temp/conftest_48.c:6:2: warning: ‘jack_client_new’ is deprecated [-Wdeprecated-declarations]
   client = jack_client_new ("foo");
@@ -760,7 +792,8 @@ scons: Configure: Checking that jack sample program runs...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_49.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/alsa .sconf_temp/conftest_49.c
+gcc -o .sconf_temp/conftest_49.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/alsa .sconf_temp/conftest_49.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 .sconf_temp/conftest_49.c: In function ‘main’:
 .sconf_temp/conftest_49.c:6:2: warning: ‘jack_client_new’ is deprecated [-Wdeprecated-declarations]
   client = jack_client_new ("foo");
@@ -779,7 +812,8 @@ scons: Configure: Checking for C header file portaudio.h...
   |#include "portaudio.h"
   |
   |
-gcc -o .sconf_temp/conftest_50.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/alsa .sconf_temp/conftest_50.c
+gcc -o .sconf_temp/conftest_50.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/alsa .sconf_temp/conftest_50.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 scons: Configure: yes
 
 scons: Configure: Checking for Pa_GetHostApiInfo() in C library portaudio... 
@@ -798,7 +832,8 @@ scons: Configure: Checking for Pa_GetHostApiInfo() in C library portaudio...
   |return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_51.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/alsa .sconf_temp/conftest_51.c
+gcc -o .sconf_temp/conftest_51.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/alsa .sconf_temp/conftest_51.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 == Linking .sconf_temp/conftest_51
 scons: Configure: yes
 
@@ -811,7 +846,8 @@ scons: Configure: Checking that portaudio sample program compiles...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_52.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/alsa .sconf_temp/conftest_52.c
+gcc -o .sconf_temp/conftest_52.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/alsa .sconf_temp/conftest_52.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 .sconf_temp/conftest_52.c: In function ‘main’:
 .sconf_temp/conftest_52.c:4:6: warning: unused variable ‘version’ [-Wunused-variable]
   int version = Pa_GetVersion();
@@ -827,7 +863,8 @@ scons: Configure: Checking that portaudio sample program links...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_53.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/alsa .sconf_temp/conftest_53.c
+gcc -o .sconf_temp/conftest_53.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/alsa .sconf_temp/conftest_53.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 .sconf_temp/conftest_53.c: In function ‘main’:
 .sconf_temp/conftest_53.c:4:6: warning: unused variable ‘version’ [-Wunused-variable]
   int version = Pa_GetVersion();
@@ -844,7 +881,8 @@ scons: Configure: Checking that portaudio sample program runs...
   |	return 0;
   |}
   |
-gcc -o .sconf_temp/conftest_54.o -c -g -Wall -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/alsa .sconf_temp/conftest_54.c
+gcc -o .sconf_temp/conftest_54.o -c -g -Wall -std=c++11 -DCLAM_FLOAT -D_DEBUG -DUSE_XERCES=1 -DCLAM_USE_XML -DCLAM_USE_XML -DUSE_LADSPA=1 -DUSE_SNDFILE=1 -DUSE_OGGVORBIS=1 -DWITH_VORBIS=1 -DUSE_MAD=1 -DWITH_MAD=1 -DUSE_ID3=1 -DUSE_ALSA=1 -DUSE_JACK=1 -I/usr/local/include -I/usr/include/glibmm-2.4 -I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sigc++-2.0 -I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include -I/usr/include/libxml++-2.6 -I/usr/lib/x86_64-linux-gnu/libxml++-2.6/include -I/usr/include/libxml2 -I/usr/include/alsa .sconf_temp/conftest_54.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C
 .sconf_temp/conftest_54.c: In function ‘main’:
 .sconf_temp/conftest_54.c:4:6: warning: unused variable ‘version’ [-Wunused-variable]
   int version = Pa_GetVersion();

@@ -7,6 +7,9 @@ env=processing_env
 moduleDependencies = ['core']
 
 folders = [
+	'src/Base'
+	'src/Errors',
+	'src/Storage/Base',
 	'src/Storage/XML',
 	'src/Standard',
 	'src/Defines',
@@ -30,6 +33,7 @@ folders = [
 	'src/Processing/SMS*.*xx',
 	'src/Processing/Transformations/SMS',
 	'src/Processing/Transformations/Spectral',
+	'src/Standard'
 	]
 
 blacklist = [

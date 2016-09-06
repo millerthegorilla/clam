@@ -46,7 +46,7 @@ def setup_global_environment( env, conf ) :
 		env.AppendUnique( CCFLAGS='-g -O3 -fomit-frame-pointer -Wall'.split(' ') )
 	else :
 		print 'COMPILING IN DEBUG MODE'
-		env.AppendUnique( CCFLAGS='-g -Wall'.split(' ') )
+		env.AppendUnique( CCFLAGS='-g -Wall -std=c++11'.split(' ') )
 		env.AppendUnique( CPPFLAGS = ['-D_DEBUG'] )
 	
 	if env['pkg_config_available'] :
