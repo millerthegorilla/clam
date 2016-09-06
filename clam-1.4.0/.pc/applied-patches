@@ -1,0 +1,5 @@
+ftbfs_NULL
+gcc48.patch
+time_utc.patch
+xerces-c-3.patch
+link-to-vorbis-ogg.patch

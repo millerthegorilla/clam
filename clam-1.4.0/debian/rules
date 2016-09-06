@@ -1,0 +1,33 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+PATH := $(CURDIR)/bin:$(PATH)
+export PATH
+
+%:
+	dh $@ 
+override_dh_auto_clean:
+	mkdir -p $(CURDIR)/debian/tmp/usr
+	scons -c
+	rm -rf bin
+
+override_dh_auto_configure:
+	mkdir -p bin
+	echo 'exec /usr/bin/g++ -fpermissive "$$@"' > bin/g++
+	chmod 755 bin/g++
+	mkdir -p $(CURDIR)/debian/tmp/usr
+	scons configure prefix=/usr \
+		prefix_for_packaging=$(CURDIR)/debian/tmp/usr \
+		release=1 \
+		with-fftw3=1
+
+
+override_dh_auto_build:
+	scons
+	scons doxygen
+
+override_dh_auto_install:
+	mkdir -p $(CURDIR)/debian/tmp/usr
+	scons install
